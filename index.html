@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="body-hidden">
     <nav id="nav">
       <div class="hamburger-menu" onclick="toggleMenu()">
         <span class="bar"></span>
@@ -38,6 +38,17 @@
         <a href="#prenota" class="cta-button">Prenota la tua esperienza</a>
       </div>
     </header>
+    <main>
+      <h3>Le nostre case</h3>
+      <div id="sicilianRoom1"><h4>Sicilian Room 1</h4></div>
+      <div id="sicilianRoom2"><h4>Sicilian Room 2</h4></div>
+    </main>
     <script src="script.js"></script>
+    <script src="tuo-file.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        document.body.classList.remove("body-hidden");
+      });
+    </script>
   </body>
 </html>

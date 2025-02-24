@@ -20,7 +20,7 @@ const slides = [
     buttonText: "Prenota la tua esperienza",
     buttonLink: "#prenota",
     h1FontSize: "2.5rem",
-    h2FontSize: "1.5rem",
+    h2FontSize: "1.3rem",
     h1fontWeight: "700",
   },
   {
