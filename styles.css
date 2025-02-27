@@ -9,6 +9,11 @@ body {
   height: 1000px;
   background-color: #f5f2eb;
 }
+header {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e7dfd2;
+}
 nav {
   position: fixed;
   top: 0;
@@ -53,6 +58,33 @@ nav {
 .ham-menu-content.show {
   left: 0; /* Il menu entra completamente nella vista */
 }
+.ham-menu-content ul {
+  list-style: none;
+  padding: 0;
+
+  width: 10rem;
+  height: 30rem;
+  margin-left: -2rem;
+  margin-top: 3rem;
+  border: 1px solid black;
+}
+
+.ham-menu-content ul li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.ham-menu-content ul li a {
+  color: #3b3b3b;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+}
+
+.ham-menu-content ul li a:hover {
+  text-decoration: underline;
+}
+
 .bar.remove {
   display: none;
 }
