@@ -6,7 +6,7 @@
 body {
   font-family: "Lora", serif;
   height: 10000px;
-  background-color: #000000;
+  background-color: #e7dfd2;
 }
 
 nav {
@@ -15,13 +15,14 @@ nav {
   left: 0;
   width: 100%;
   height: 8vh;
-  background-color: #e7dfd2;
+  background-color: #d4c8b1;
+
   padding: 2.5rem 1rem;
   z-index: 1000;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border-bottom: 2px solid #d0c1a0;
+  border-bottom: 2px solid #bba783;
 }
 .ham-menu {
   width: 2rem;
@@ -47,10 +48,10 @@ nav {
   left: -50%; /* Inizialmente il menu è fuori dalla vista a sinistra */
   width: 50%; /* Copre il 50% della pagina */
   height: 100%;
-  background-color: #e7dfd2;
+  background-color: #d4c8b1;
   padding: 50px;
   transition: left 0.5s ease; /* Transizione per l'apertura */
-  border-right: 1px solid #d0c1a0;
+  border-right: 1px solid #bba783;
 }
 .ham-menu-content.show {
   left: 0; /* Il menu entra completamente nella vista */
@@ -143,7 +144,7 @@ header {
   flex-direction: column;
   background-image: linear-gradient(rgba(15, 15, 15, 0.5), rgba(0, 0, 0, 0.5)),
     url("Fotoheader1.jpg");
-  transition: opacity 1s ease-out; /* Transizione opacità per il fade in/out */
+  animation: fadeIn 0.8s ease;
   opacity: 1;
 }
 
@@ -152,7 +153,8 @@ header {
     url("Fotoheader2.jpg");
 }
 .slide:nth-of-type(3) {
-  background-image: url(Fotoheader3.jpg);
+  background-image: linear-gradient(rgba(15, 15, 15, 0.5), rgba(0, 0, 0, 0.5)),
+    url("Fotoheader3.jpg");
 }
 
 .title-slide {
@@ -162,6 +164,8 @@ header {
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
+
+  animation: fadeIn 1s ease-in;
 }
 
 .second-title-slide {
@@ -169,10 +173,15 @@ header {
   font-family: "Poppins", sans-serif;
   color: #ffffff;
   margin-top: 2rem;
+  text-align: center;
+  width: 90%;
+
+  animation: fadeIn 1.2s ease-in;
 }
-.title-slide:nth-of-type(2),
-.title-slide:nth-of-type(3) {
-  font-size: 1rem;
+
+.slide:nth-of-type(2) .title-slide,
+.slide:nth-of-type(3) .title-slide {
+  font-size: 2.3rem;
 }
 
 /* Aggiungi questa animazione per il fade-in dei testi */
@@ -185,4 +194,51 @@ header {
     opacity: 1;
     transform: translateY(0); /* Arriva nella posizione finale */
   }
+}
+
+.cta-button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #e7dfd281;
+  padding: 15px 30px;
+  text-align: center;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 4rem;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.cta-button:hover {
+  background-color: #e7dfd2;
+  color: #7a7a7a;
+}
+
+.indicators {
+  width: 100%;
+  height: 5rem;
+
+  position: absolute;
+  top: 50rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.indicator {
+  width: 4rem;
+  height: 0.1rem;
+  border: none;
+  background-color: white;
+}
+.indicator:hover {
+  width: 3rem;
+  height: 0.1rem;
+  background-color: #b5a494;
+}
+
+.indicator.active {
+  background-color: black;
 }

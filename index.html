@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#e7dfd2" />
-
     <title>Siclian Room BeB</title>
     <link rel="stylesheet" href="styles.css" />
     <link
@@ -33,21 +32,31 @@
     </nav>
     <header>
       <div class="container-slider">
-        <div class="slide">
+        <div class="slide" id="slide1">
           <p class="title-slide">Vivi Catania</p>
           <p class="second-title-slide">Prenota la tua esperienza</p>
+          <a href="#prenota" class="cta-button">Prenota la tua esperienza</a>
         </div>
-        <div class="slide">
-          <p class="title-slide">Esplora la Citta' del sole</p>
+        <div class="slide" id="slide2">
+          <p class="title-slide">
+            Esplora la Citta' <br />
+            del sole
+          </p>
           <p class="second-title-slide">La nostra casa in pieno centro.</p>
+          <a href="#prenota" class="cta-button">Scopri le nostre case</a>
         </div>
-        <div class="slide">
+        <div class="slide" id="slide3">
           <p class="title-slide">Avventura e relax</p>
           <p class="second-title-slide">
-            Guarda i punti d'interesse vicino a noi.
+            Tra mare e montagna,scopri i nostri servizi.
           </p>
+          <a href="#prenota" class="cta-button">I nostri servizi</a>
         </div>
-        <div class="container-slider-btn"></div>
+      </div>
+      <div class="indicators">
+        <button class="indicator" data-slide="0"></button>
+        <button class="indicator" data-slide="1"></button>
+        <button class="indicator" data-slide="2"></button>
       </div>
     </header>
 
