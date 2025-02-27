@@ -7,13 +7,9 @@ body {
   margin: 0;
   font-family: "Lora", serif;
   height: 1000px;
-  background-color: #f5f2eb;
-}
-header {
-  width: 100vw;
-  height: 100vh;
   background-color: #e7dfd2;
 }
+
 nav {
   position: fixed;
   top: 0;
