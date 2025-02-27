@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+/* Stili di base */
+body {
+  margin: 0;
+  font-family: "Lora", serif;
+  height: auto; /* Simula una pagina lunga per testare lo scroll */
+  background-color: #f5f2eb;
+}
+.body-hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  overflow: hidden; /* Evita eventuali scroll durante il caricamento */
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 8vh;
+  background-color: #e7dfd2;
+  padding: 2.5rem 1rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 2rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.bar {
+  width: 1.9rem;
+  height: 0.1rem;
+  background-color: #4f4f4f;
+  border-radius: 5px;
+}
+
+.menu-content {
+  position: fixed;
+  top: 0;
+  left: -50%; /* Inizialmente il menu è fuori dalla vista a sinistra */
+  width: 50%; /* Copre il 50% della pagina */
+  height: 100%;
+  background-color: #e7dfd2;
+  padding: 50px;
+  transition: left 0.5s ease; /* Transizione per l'apertura */
+  z-index: 999;
+}
+
+.menu-content.show {
+  left: 0; /* Il menu entra completamente nella vista */
+}
+
+.menu-content ul {
+  list-style: none;
+  padding: 0;
+
+  width: 10rem;
+  height: 30rem;
+  margin-left: -2rem;
+  margin-top: 3rem;
+}
+
+.menu-content ul li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.menu-content ul li a {
+  color: #3b3b3b;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+}
+
+.menu-content ul li a:hover {
+  text-decoration: underline;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 24px;
+  color: #4f4f4f;
+  cursor: pointer;
+}
+
+/* Effetto per trasformare le barre dell'hamburger in "X" */
+.hamburger-menu.active .bar:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 7px;
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -7px;
+}
+.logo {
+  width: 15rem;
+  height: 4rem;
+  margin: 0 3.2rem 0 auto;
+  background-image: url(Logo\ sicilian\ Room.svg);
+  background-position: center;
+  background-size: 120%;
+  transition: margin 0.5s ease, width 0.5s ease; /* Transizione per l'apertura */
+}
+
+.logo.active {
+  width: 10rem;
+  height: 4rem;
+  margin: 0 0rem 0 auto;
+  background-image: url(Logo\ sicilian\ Room.svg);
+  background-position: center;
+  background-size: 120%;
+  transition: margin 0.5s ease, width 0.5s ease; /* Transizione per l'apertura */
+}
+header {
+  width: 100vw;
+  height: calc(100vh - 8vh);
+
+  margin-top: 5rem;
+  position: relative;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Il testo parte sotto */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Il testo arriva nella sua posizione finale */
+  }
+}
+
+.container-foto-header {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: fadeIn 0.5s ease-out; /* Animazione che si applica quando la container è visibile */
+}
+
+h1,
+h2,
+.cta-button {
+  opacity: 0; /* Nascondi i testi all'inizio */
+  animation: fadeIn 1s ease-out forwards; /* Animazione di entrata */
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #e7dfd281;
+  padding: 15px 30px;
+  text-align: center;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+}
+
+.cta-button:hover {
+  background-color: #e7dfd2;
+  color: #7a7a7a;
+}
+main {
+  width: 100vw;
+  height: 2000px;
+  display: flex;
+  flex-direction: column;
+}
+h3 {
+  color: #4b4b4b;
+  font-family: "Poppins", sans-serif;
+
+  margin: 2rem auto 0 auto;
+
+  font-size: 2rem;
+  font-weight: 400;
+
+  text-align: center;
+}
+
+#sicilianRoom1,
+#sicilianRoom2 {
+  width: 100%;
+  height: 50%;
+  border: 1px solid black;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+main h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem;
+  color: #4b4b4b;
+  font-weight: 300;
+  text-align: center;
+}

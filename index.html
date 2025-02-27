@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sicilian Room BeB</title>
+    <title>Siclian Room BeB</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="body-hidden">
-    <nav id="nav">
-      <div class="hamburger-menu" onclick="toggleMenu()">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+  <body>
+    <nav>
+      <div class="ham-menu" onclick="toggleMenu()">
+        <span class="bar"></span><span class="bar"></span
+        ><span class="bar"></span>
       </div>
-      <div class="menu-content">
-        <div class="close-btn" onclick="toggleMenu()">X</div>
+      <div class="ham-menu-content">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Le nostre case</a></li>
@@ -31,24 +29,6 @@
       </div>
       <div class="logo"></div>
     </nav>
-    <header>
-      <div class="container-foto-header">
-        <h1>Dove l'Etna incontra il mare</h1>
-        <h2>Vivi Catania</h2>
-        <a href="#prenota" class="cta-button">Prenota la tua esperienza</a>
-      </div>
-    </header>
-    <main>
-      <h3>Le nostre case</h3>
-      <div id="sicilianRoom1"><h4>Sicilian Room 1</h4></div>
-      <div id="sicilianRoom2"><h4>Sicilian Room 2</h4></div>
-    </main>
     <script src="script.js"></script>
-    <script src="tuo-file.js"></script>
-    <script>
-      window.addEventListener("load", function () {
-        document.body.classList.remove("body-hidden");
-      });
-    </script>
   </body>
 </html>
