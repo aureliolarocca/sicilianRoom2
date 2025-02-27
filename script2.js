@@ -48,39 +48,31 @@ const slides = [
 
 let currentSlide = 0;
 
-function changeSlide() {
-  const slide = slides[currentSlide];
+function changeSlideHeader() {
+  const slideIndex = slides[currentSlide];
 
-  // Cambia l'immagine di sfondo
-  header.style.backgroundImage = slide.backgroundImage;
+  contentSlide.style.backgroundImage = slideIndex.backgroundImage;
+  titleSlide.textContent = slideIndex.p1Text;
+  secondTitleSlide.textContent = slideIndex.p2Text;
 
-  // Cambia i testi
-  h1.style.fontSize = slide.h1FontSize;
-  h2.style.fontSize = slide.h2FontSize;
-  h1.style.fontWeight = slide.h1fontWeight;
+  titleSlide.style.fontSize = slideIndex.p1FontSize;
+  secondTitleSlide.style.fontSize = slideIndex.p2FontSize;
+  titleSlide.style.fontWeight = slideIndex.p1fontWeight;
 
-  h1.textContent = slide.h1Text;
-  h2.textContent = slide.h2Text;
-  ctaButton.textContent = slide.buttonText;
-  ctaButton.setAttribute("href", slide.buttonLink);
+  // Fade out the titles
+  titleSlide.style.opacity = 0;
+  secondTitleSlide.style.opacity = 0;
 
-  // Resetta l'animazione per ogni cambio
-  h1.style.animation = "none";
-  h2.style.animation = "none";
-  ctaButton.style.animation = "none";
-
+  // Wait for the background image change before starting the text animations
   setTimeout(() => {
-    h1.style.animation = "fadeIn 1.5s ease-out forwards";
-    h2.style.animation = "fadeIn 1.5s ease-out forwards";
-    ctaButton.style.animation = "fadeIn 1.5s ease-out forwards";
-  }, 100);
+    titleSlide.style.opacity = 1;
+    secondTitleSlide.style.opacity = 1;
+  }, 500); // Delay slightly to allow the background to load
 
-  // Incrementa l'indice della slide
   currentSlide = (currentSlide + 1) % slides.length;
 }
-
 // Cambia slide ogni 5 secondi
-setInterval(changeSlide, 8000);
+setInterval(changeSlide, 10000);
 
 // Inizializza con la prima slide
 changeSlide();

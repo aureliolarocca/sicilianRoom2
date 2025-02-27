@@ -11,26 +11,44 @@
     />
   </head>
   <body>
+    <nav>
+      <div class="ham-menu" onclick="toggleMenu()">
+        <span class="bar"></span><span class="bar"></span
+        ><span class="bar"></span>
+      </div>
+      <div class="ham-menu-content">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Le nostre case</a></li>
+          <li><a href="#">Sicilian Room 1</a></li>
+          <li><a href="#">Sicilian Room 2</a></li>
+          <li><a href="#">Chi Siamo</a></li>
+          <li><a href="#">Servizi</a></li>
+          <li><a href="#">Contatti</a></li>
+        </ul>
+      </div>
+      <div class="logo"></div>
+    </nav>
     <header>
-      <nav>
-        <div class="ham-menu" onclick="toggleMenu()">
-          <span class="bar"></span><span class="bar"></span
-          ><span class="bar"></span>
+      <div class="container-slider">
+        <div class="slide">
+          <p class="title-slide">Vivi Catania</p>
+          <p class="second-title-slide">Prenota la tua esperienza</p>
         </div>
-        <div class="ham-menu-content">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Le nostre case</a></li>
-            <li><a href="#">Sicilian Room 1</a></li>
-            <li><a href="#">Sicilian Room 2</a></li>
-            <li><a href="#">Chi Siamo</a></li>
-            <li><a href="#">Servizi</a></li>
-            <li><a href="#">Contatti</a></li>
-          </ul>
+        <div class="slide">
+          <p class="title-slide">Esplora la Citta' del sole</p>
+          <p class="second-title-slide">La nostra casa in pieno centro.</p>
         </div>
-        <div class="logo"></div>
-      </nav>
+        <div class="slide">
+          <p class="title-slide">Avventura e relax</p>
+          <p class="second-title-slide">
+            Guarda i punti d'interesse vicino a noi.
+          </p>
+        </div>
+        <div class="container-slider-btn"></div>
+      </div>
     </header>
+
     <script src="script.js"></script>
   </body>
 </html>

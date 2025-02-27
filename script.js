@@ -12,3 +12,16 @@ function toggleMenu() {
   const logo = document.querySelector(".logo");
   logo.classList.toggle("active");
 }
+
+let currentSlide = 0;
+const totalSlides = 3;
+const slidesContainer = document.querySelector(".container-slider");
+
+// Funzione per cambiare slide
+function changeSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides; // Cambia la slide ciclicamente
+  slidesContainer.style.transform = `translateX(-${currentSlide * 100}vw)`; // Sposta le slide
+}
+
+// Cambia la slide ogni 3 secondi
+setInterval(changeSlide, 8000);
