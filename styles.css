@@ -99,7 +99,7 @@ nav {
 .logo {
   width: 14rem;
   height: 4rem;
-  margin: 0 4.3rem 0 auto;
+  margin: 0 3.7rem 0 auto;
   background-image: url(Logo\ sicilian\ Room.svg);
   background-position: center;
   background-size: 120%;
@@ -273,7 +273,7 @@ main h3 {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombra per maggiore leggibilità */
 }
 main h2 {
-  color: #4a3c2f; /* Colore più scuro per h2 */
+  color: #2d2a26; /* Colore più scuro per h2 */
   font-family: "Poppins", sans-serif;
   font-weight: 600; /* Peso medio per i sottotitoli */
   font-size: 1.5rem;
@@ -284,10 +284,11 @@ main h2 {
 }
 
 main h3 {
-  color: #7a6a47; /* Colore più scuro per h3 */
+  color: #2d2a26; /* Colore più scuro per h3 */
   font-family: "Poppins", sans-serif;
   font-weight: 500; /* Peso medio per i titoli secondari */
   font-size: 1.25rem;
+  text-decoration: underline;
 
   margin-bottom: 0.8rem;
   text-align: center;
@@ -299,14 +300,14 @@ main p {
   font-family: "Poppins", sans-serif;
   font-weight: 400; /* Peso normale per il testo */
   font-size: 0.8rem;
-  color: #5a4d39; /* Colore scuro per il testo */
+  color: #2d2a26; /* Colore scuro per il testo */
   line-height: 1.6;
   text-align: center;
   margin-top: 1.2rem;
   margin-bottom: 2rem;
 }
 .room-image {
-  width: 100%;
+  width: 90%;
   height: auto;
   object-fit: cover; /* Mantiene l'immagine proporzionata senza distorsioni */
   border-radius: 10px; /* Aggiungi angoli arrotondati */
@@ -319,4 +320,98 @@ main p {
     1.05
   ); /* Ingrandisce leggermente l'immagine al passaggio del mouse */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta l'ombra al passaggio del mouse */
+}
+
+main article {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  color: #b7a46c;
+}
+main article div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 70%;
+  margin-bottom: 1.5rem;
+  margin-top: -0.5rem;
+}
+
+main article div p {
+  font-size: 1rem;
+  margin: 0 1rem 0 1rem;
+}
+
+main button {
+  border: none;
+  background-color: #b7a46c;
+  font-family: Poppins;
+  padding: 1.2rem;
+  font-size: 1rem;
+  border-radius: 3rem;
+  width: 80%;
+  transition: background-color 0.5s ease;
+  color: white;
+  transition: 0.8s ease;
+}
+main button:hover {
+  background-color: #a18f5a; /* Un tono più scuro per un bel contrasto */
+  transform: scale(1.05); /* Leggero ingrandimento */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Effetto sollevato */
+}
+
+main section:nth-of-type(4) {
+  background-image: linear-gradient(rgba(15, 15, 15, 0.8), rgba(0, 0, 0, 0.8)),
+    url(mateusz-butkiewicz-cEYzWTU8PmQ-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 4rem 2rem; /* Più spazio intorno per evitare l'effetto "soffocato" */
+  text-align: center;
+}
+
+/* Titolo più d'impatto */
+main section:nth-of-type(4) h2 {
+  color: #ffffff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+}
+
+/* Testo più leggibile e raffinato */
+main section:nth-of-type(4) p {
+  font-size: 1.1rem;
+  text-align: start;
+  color: #f5f5f5;
+  line-height: 1.8;
+  font-family: "Poppins", sans-serif;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Leggero sfondo trasparente per migliorare la leggibilità */
+  border-left: 4px solid #b7a46c; /* Un tocco di stile con un bordo laterale */
+  padding: 1.5rem;
+  display: inline-block;
+
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Effetto leggero al passaggio del mouse */
+main section:nth-of-type(4) p:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
 }
