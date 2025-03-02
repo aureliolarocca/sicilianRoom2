@@ -5,7 +5,7 @@
 }
 body {
   font-family: "Lora", serif;
-  height: 10000px;
+  height: auto;
   background-color: #e1d6b4;
 }
 
@@ -47,8 +47,8 @@ nav {
   top: 0;
   left: -50%; /* Inizialmente il menu è fuori dalla vista a sinistra */
   width: 50%; /* Copre il 50% della pagina */
-  height: 100%;
-  background-color: #e1d6b4;
+  height: 50%;
+  background-color: #e1d6b4e6;
   padding: 50px;
   transition: left 0.5s ease; /* Transizione per l'apertura */
   border-right: 1px solid #c8b893;
@@ -61,9 +61,9 @@ nav {
   padding: 0;
 
   width: 10rem;
-  height: 30rem;
+  height: auto;
   margin-left: -2rem;
-  margin-top: 3rem;
+  margin-top: 1.8rem;
 }
 
 .ham-menu-content ul li {
@@ -366,7 +366,120 @@ main button:hover {
   transform: scale(1.05); /* Leggero ingrandimento */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Effetto sollevato */
 }
+#servizi {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#servizi h3,
+#recensioni h3 {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+#servizi p {
+  text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.15);
+  color: #2d2a26;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+#servizi img {
+  margin-top: 1.5rem;
+  width: 6rem;
+}
 
+#servizi button {
+  width: 100%;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+#recensioni {
+  margin-top: 1rem;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.recensioni-content {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Bordo leggero */
+  background: rgba(255, 255, 255, 0.6); /* Sfondo semi-trasparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Ombra per profondità */
+}
+
+.img-recensioni {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.3); /* Bordo semi-trasparente */
+  background-image: url(sergio-de-paula-c_GmwfHBDzk-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra per risalto */
+}
+
+h4 {
+  color: #2d2a26;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+#recensioni div p {
+  width: 90%;
+  background: rgba(255, 255, 255, 0.7); /* Sfondo trasparente */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1); /* Effetto incavato */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.point-recensioni {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+  border-bottom-right-radius: 20%;
+  background-color: #003b95;
+  font-size: 1rem;
+  pointer-events: none; /* Disabilita i clic */
+}
+#recensioni div:nth-of-type(4),
+#prenota div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+#recensioni div:nth-of-type(4) button,
+#prenota div button {
+  width: 10rem;
+  height: 3rem;
+  padding: 1rem;
+  font-size: 0.8rem;
+  border-radius: 0;
+  background-color: #003b95;
+  margin-bottom: 2rem;
+}
 main section:nth-of-type(4) {
   background-image: linear-gradient(rgba(15, 15, 15, 0.8), rgba(0, 0, 0, 0.8)),
     url(mateusz-butkiewicz-cEYzWTU8PmQ-unsplash.jpg);
@@ -414,4 +527,38 @@ main section:nth-of-type(4) p:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: scale(1.02);
   transition: all 0.3s ease-in-out;
+}
+
+#prenota {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#prenota p:nth-of-type(1) {
+  background-color: #a18f5a;
+  color: white;
+  padding: 1rem;
+}
+
+#prenota img {
+  width: 4rem;
+  margin-top: 1rem;
+}
+#prenota h3 {
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  color: whitesmoke;
+}
+footer a {
+  color: white;
 }
